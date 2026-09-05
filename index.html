@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhammad Mahin – Web Magician</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700;900&family=Questrial&family=Azeret+Mono:wght@400;500&family=Pathway+Gothic+One&family=Manrope:wght@400;500;600&family=Oswald:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <div class="header-inner">
+    <button class="hamburger" id="menuOpen" aria-label="Open Menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><path fill="currentColor" fill-rule="evenodd" d="M6 11a1 1 0 0 1 1-1h34a1 1 0 1 1 0 2H7a1 1 0 0 1-1-1m0 13a1 1 0 0 1 1-1h34a1 1 0 1 1 0 2H7a1 1 0 0 1-1-1m0 13a1 1 0 0 1 1-1h34a1 1 0 1 1 0 2H7a1 1 0 0 1-1-1" clip-rule="evenodd"/></svg>
+    </button>
+    <a href="http://Wa.me/+8801884194199" target="_blank" class="btn btn-filled" style="padding:14px 28px;font-size:13px;">BOOK A CALL</a>
+  </div>
+</header>
+
+<!-- ===== NAV MODAL (FIX #8) ===== -->
+<div class="nav-modal" id="navModal">
+  <div class="nav-modal-header">
+    <button class="close-btn" id="menuClose"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M20 20L4 4m16 0L4 20"/></svg></button>
+    <a href="http://Wa.me/+8801884194199" target="_blank" class="btn btn-filled" style="padding:14px 28px;font-size:13px;">BOOK A CALL</a>
+  </div>
+  <div class="nav-modal-content">
+    <nav class="nav-links">
+      <a href="./">Home</a>
+      <a href="./service/">Service</a>
+      <a href="./work/">Work</a>
+      <a href="./about-me/">About me</a>
+      <a href="./blogs/">Blogs</a>
+      <a href="./contact/">Contact</a>
+    </nav>
+    <div class="nav-social">
+      <span class="nav-social-label">Follow me on</span>
+      <div class="social-row">
+        <a href="https://www.facebook.com/muhammadmahindev/" target="_blank"><svg width="12" height="12" viewBox="0 0 320 512" fill="currentColor"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg> Facebook</a>
+        <a href="https://www.behance.net/muhammadmahindev" target="_blank"><svg width="16" height="12" viewBox="0 0 512 512" fill="currentColor"><path d="M232 237.2c31.8-15.2 48.4-38.2 48.4-74 0-70.6-52.6-87.8-113.3-87.8H0v354.4h171.8c64.4 0 124.9-20.9 124.9-102.6 0-51-31.1-77.7-64.7-89.9zM71.4 133.5h77c22.3 0 46 8.5 46 39.5s-23.7 40.5-46 40.5h-77v-80zm0 238.1v-96.2h84.2c31.1 0 53.6 13 53.6 48.6 0 33-22.5 47.6-53.6 47.6H71.4zM390 121.5h-84.8V170H390v-48.5zM388.4 200.5c-42.3 0-76.4 29.8-82.6 74h161.4c-4.4-44.2-38.5-74-78.8-74zm-22 39.5c6.5-12 18.5-17.5 24.5-17.5 10 0 20 6.5 24 17.5h-48.5z"/><path d="M512 300.5c0-67-54-100-123.6-100-75.9 0-127.4 51.5-127.4 121.5S314.9 444 391 444c53.5 0 95.5-27 106.5-70.5h-57c-6 13-17.5 20.5-47 20.5-31 0-52-19.5-52-53.5h168c1-7.5 2.5-20.5 2.5-40z"/></svg> Behance</a>
+        <a href="https://www.linkedin.com/in/muhammadmahindev/" target="_blank"><svg width="14" height="14" viewBox="0 0 448 512" fill="currentColor"><path d="M100.28 148.14L7.39 148.14 7.39 507.26h92.89V148.14zM53.79 6.2C22.79 6.2 0 28.98 0 58.74c0 29 22 51.81 52.29 52.54h.7c31.79 0 53.79-23.54 53.79-52.54C106.08 28.98 84.79 6.2 53.79 6.2zM344.7 148.14c-49.49 0-71.59 27.23-83.99 46.22v-39.73h-92.89c1.2 26.24 0 359.12 0 359.12h92.89V306.94c0-16.14 1.15-32.28 5.89-43.83 13-32.28 42.49-65.73 92.08-65.73 65 0 91.09 49.48 91.09 122.25v187.63h92.89V298.86c0-111.45-59.59-163.38-138.96-163.38z"/></svg> LinkedIn</a>
+        <a href="https://www.instagram.com/muhammadmahindev/" target="_blank"><svg width="14" height="14" viewBox="0 0 448 512" fill="currentColor"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg> Instagram</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== HERO (FIX #1 #2) ===== -->
+<section class="hero">
+  <div class="hero-inner">
+    <!-- FIX #1: intro paragraph positioned center-right (photo level) -->
+    <div class="hero-intro hidden-mobile">
+      <p>I'm <strong>Muhammad Mahin</strong>. I design and develop beautiful, high-performing websites using <strong>WordPress, Wix, and Webflow</strong> — helping your brand stand out online.</p>
+    </div>
+    <div class="hero-bottom">
+      <div class="hero-badges">
+        <span>WordPress Developer</span>
+        <span>Wix Expert</span>
+        <span>MARKETING Expert</span>
+        <span>Webflow Designer</span>
+      </div>
+      <!-- Mobile only text -->
+      <div class="hidden-desktop" style="padding:20px 0;">
+        <p style="font-family:'Questrial',sans-serif;font-size:17px;color:var(--gray-light);line-height:1.3em;">I'm <strong style="color:var(--white)">Muhammad Mahin</strong>. I design and develop beautiful, high-performing websites using <strong style="color:var(--white)">WordPress, Wix, and Webflow</strong> — helping your brand stand out online.</p>
+      </div>
+      <!-- FIX #2: name with orange border box and arrow decoration -->
+      <div class="hero-name">
+        <h2>Muhammad Mahin</h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LOGO MARQUEE (FIX #3: heading gets fade-in animation) ===== -->
+<section class="marquee-section">
+  <!-- FIX #4: SplitText reveal on marquee heading -->
+  <div class="marquee-heading staggerscroll">
+    <h2 id="marqueeHeading">Trusted by big names and fast-growing brands around the world</h2>
+  </div>
+  <div class="marquee-track-wrap">
+    <div class="marquee-track">
+      <span class="marquee-item">Brand One</span><span class="marquee-item">Brand Two</span><span class="marquee-item">Brand Three</span><span class="marquee-item">Brand Four</span><span class="marquee-item">Brand Five</span><span class="marquee-item">Brand Six</span><span class="marquee-item">Brand Seven</span><span class="marquee-item">Brand Eight</span>
+      <span class="marquee-item">Brand One</span><span class="marquee-item">Brand Two</span><span class="marquee-item">Brand Three</span><span class="marquee-item">Brand Four</span><span class="marquee-item">Brand Five</span><span class="marquee-item">Brand Six</span><span class="marquee-item">Brand Seven</span><span class="marquee-item">Brand Eight</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PORTFOLIO (LIGHT) ===== -->
+<section class="portfolio-sec">
+  <div class="container">
+    <div class="portfolio-badge-row"><h4 class="badge">passionate project</h4></div>
+    <div class="portfolio-heading staggerscroll">
+      <h2>These projects highlight the work I do best—crafted for your brand, your business, and the results that fuel real growth.</h2>
+    </div>
+    <div class="portfolio-grid">
+      <div class="portfolio-card">
+        <div style="border-radius:10px;aspect-ratio:1024/756;background:url('./img/Anonimos (1).png') center/cover no-repeat"></div>
+        <div class="card-meta">
+          <h3><a href="https://www.anonimos.top/" target="_blank">Anonimos</a></h3>
+          <a href="https://www.anonimos.top/" target="_blank" class="arrow-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><path fill="currentColor" d="M768 256H353.6a32 32 0 1 1 0-64H800a32 32 0 0 1 32 32v448a32 32 0 0 1-64 0z"/><path fill="currentColor" d="M777.344 201.344a32 32 0 0 1 45.312 45.312l-544 544a32 32 0 0 1-45.312-45.312z"/></svg></a>
+        </div>
+      </div>
+      <div class="portfolio-card">
+        <div style="border-radius:10px;aspect-ratio:1024/756;background:url('./img/Beafreemason.png') center/cover no-repeat"></div>
+        <div class="card-meta">
+          <h3><a href="https://beafreemason.org" target="_blank">Beafreemason</a></h3>
+          <a href="https://beafreemason.org" target="_blank" class="arrow-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><path fill="currentColor" d="M768 256H353.6a32 32 0 1 1 0-64H800a32 32 0 0 1 32 32v448a32 32 0 0 1-64 0z"/><path fill="currentColor" d="M777.344 201.344a32 32 0 0 1 45.312 45.312l-544 544a32 32 0 0 1-45.312-45.312z"/></svg></a>
+        </div>
+      </div>
+      <div class="portfolio-card">
+        <div style="border-radius:10px;aspect-ratio:1024/756;background:url('./img/Dnakids.png') center/cover no-repeat"></div>
+        <div class="card-meta">
+          <h3><a href="https://www.dnakids.co.uk/" target="_blank">Dnakids</a></h3>
+          <a href="https://www.dnakids.co.uk/" target="_blank" class="arrow-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><path fill="currentColor" d="M768 256H353.6a32 32 0 1 1 0-64H800a32 32 0 0 1 32 32v448a32 32 0 0 1-64 0z"/><path fill="currentColor" d="M777.344 201.344a32 32 0 0 1 45.312 45.312l-544 544a32 32 0 0 1-45.312-45.312z"/></svg></a>
+        </div>
+      </div>
+      <div class="portfolio-card">
+        <div style="border-radius:10px;aspect-ratio:1024/756;background:url('./img/Sofiasundari.png') center/cover no-repeat"></div>
+        <div class="card-meta">
+          <h3><a href="https://sofiasundari.com/" target="_blank">Sofiasundari</a></h3>
+          <a href="https://sofiasundari.com/" target="_blank" class="arrow-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><path fill="currentColor" d="M768 256H353.6a32 32 0 1 1 0-64H800a32 32 0 0 1 32 32v448a32 32 0 0 1-64 0z"/><path fill="currentColor" d="M777.344 201.344a32 32 0 0 1 45.312 45.312l-544 544a32 32 0 0 1-45.312-45.312z"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="portfolio-cta"><a href="./work/" class="btn btn-outline-dark">SEE MORE WORKS</a></div>
+
+<!-- ===== STATISTICS (DARK) - FIX #4 ===== -->
+<section class="stats-sec">
+  <div class="container">
+    <!-- FIX #4: stats-header with bottom border, space below -->
+    <div class="stats-header">
+      <h4 class="badge">Statistics</h4>
+      <span class="badge-number hidden-mobile">Trusted Across the Globe</span>
+    </div>
+    <div class="stats-main">
+      <div class="stats-row1">
+        <div class="stats-cell-heading">
+          <div class="staggerscroll"><h2>Global Influence.<br class="hidden-mobile">Real Results.</h2></div>
+        </div>
+        <div class="stats-cell">
+          <div class="stat-num" data-target="25" data-suffix="+">0</div>
+          <p class="stat-title">Websites crafted to power your online presence—and beat the competition.</p>
+        </div>
+        <div class="stats-cell">
+          <div class="stat-num" data-target="98" data-suffix="%">0</div>
+          <p class="stat-title">Clients get exactly what they need—and a little more than they expect.</p>
+        </div>
+      </div>
+      <div class="stats-row2">
+        <div class="stats-wide">
+          <div class="stat-num hidden-mobile" data-target="12" data-suffix="+">0</div>
+          <p class="stat-title">Countries We've Worked With</p>
+        </div>
+        <div class="stats-narrow">
+          <div class="stat-num" data-target="20" data-suffix="+">0</div>
+          <p class="stat-title">Growing your brand and adding 30+ new connections monthly.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES (LIGHT) - FIX #5 carousel ===== -->
+<section class="services-sec">
+  <div class="container">
+    <div class="services-header">
+      <h4 class="badge">Service</h4>
+      <span class="badge-number hidden-mobile">Helping You Stand Out</span>
+    </div>
+    <div class="services-wrap">
+      <!-- WordPress -->
+      <div class="service-row">
+        <div>
+          <h2 class="service-title">WordPress Expert</h2>
+          <p class="service-desc">Strategy comes first. I research user behavior to craft WordPress experiences that combine stunning visuals with powerful performance.</p>
+          <a href="./service/" class="btn btn-filled" style="margin-top:16px">learn more</a>
+        </div>
+        <div>
+          <p class="service-sub">What's Included:</p>
+          <div class="feature-item">User Research &amp; Strategy</div>
+          <div class="feature-item">UI/UX Design (Figma)</div>
+          <div class="feature-item">WordPress Website Design</div>
+          <div class="feature-item">Responsive Web Design</div>
+          <div class="feature-item">Speed &amp; Performance Optimization</div>
+          <div class="feature-item">SEO-Friendly Structure</div>
+        </div>
+        <!-- FIX #5: carousel -->
+        <div class="service-visual">
+          <div class="svc-carousel" id="svc1">
+            <div class="svc-slide" style="background:url('./img/WordPress Expert slide-1.png') center/cover no-repeat"></div>
+            <div class="svc-slide" style="background:url('./img/WordPress Expert slide-2.png') center/cover no-repeat"></div>
+            <div class="svc-slide" style="background:url('./img/WordPress Expert slide-3.png') center/cover no-repeat"></div>
+          </div>
+          <div class="svc-dots" id="dots1"></div>
+        </div>
+      </div>
+      <!-- Wix -->
+      <div class="service-row">
+        <div>
+          <h2 class="service-title">wix website</h2>
+          <p class="service-desc">Partnering with founders to elevate their online presence and build meaningful connections.</p>
+          <a href="./service/" class="btn btn-filled" style="margin-top:16px">learn more</a>
+        </div>
+        <div>
+          <p class="service-sub">What's Included:</p>
+          <div class="feature-item">User Research &amp; Strategy</div>
+          <div class="feature-item">UI/UX Design (Figma)</div>
+          <div class="feature-item">wix Website Design</div>
+          <div class="feature-item">Responsive Web Design</div>
+          <div class="feature-item">Feature Integration</div>
+          <div class="feature-item">SEO-Friendly Structure</div>
+        </div>
+        <div class="service-visual">
+          <div class="svc-carousel" id="svc2">
+            <div class="svc-slide" style="background:url('./img/wix website slide-1.png') center/cover no-repeat"></div>
+            <div class="svc-slide" style="background:url('./img/wix website slide-2.png') center/cover no-repeat"></div>
+            <div class="svc-slide" style="background:url('./img/wix website slide-3.png') center/cover no-repeat"></div>
+          </div>
+          <div class="svc-dots" id="dots2"></div>
+        </div>
+      </div>
+      <!-- Webflow -->
+      <div class="service-row">
+        <div>
+          <h2 class="service-title">webflow website</h2>
+          <p class="service-desc">Building Interactive, High-Performing Web Experiences That Engage Users and Elevate Your Brand Online.</p>
+          <a href="./service/" class="btn btn-filled" style="margin-top:16px">learn more</a>
+        </div>
+        <div>
+          <p class="service-sub">What's Included:</p>
+          <div class="feature-item">User Research &amp; Strategy</div>
+          <div class="feature-item">UI/UX Design (Figma)</div>
+          <div class="feature-item">Webflow Site Design</div>
+          <div class="feature-item">Responsive Web Design</div>
+          <div class="feature-item">CMS setup</div>
+          <div class="feature-item">Advanced Interactions &amp; Animations</div>
+        </div>
+        <div class="service-visual">
+          <div class="svc-carousel" id="svc3">
+            <div class="svc-slide" style="background:url('./img/webflow website slide-1.png') center/cover no-repeat"></div>
+            <div class="svc-slide" style="background:url('./img/webflow website slide-2.png') center/cover no-repeat"></div>
+            <div class="svc-slide" style="background:url('./img/webflow website slide-3.png') center/cover no-repeat"></div>
+          </div>
+          <div class="svc-dots" id="dots3"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WORKING PROCESS (DARK) - FIX #6 ===== -->
+<section class="process-sec">
+  <div class="container">
+    <div class="process-badge-row"><h4 class="badge">Working Process</h4></div>
+    <div class="process-heading staggerscroll">
+      <h2>Our process ensures every project runs smoothly, stays fully organized, and is perfectly aligned with your goals—delivering results that exceed expectations.</h2>
+    </div>
+    <div class="process-grid">
+      <div class="process-sticky"></div>
+      <div class="timeline">
+        <div class="timeline-step">
+          <div class="tl-icon"><img src="./img/Discovery & Strategy.gif" alt="Discovery" style="width:100%;height:100%;object-fit:contain;border-radius:50%"></div>
+          <div class="tl-content"><h3>Discovery &amp; Strategy</h3><p>We begin by analyzing your brand, audience, and competitors to define a clear strategy for your website.</p></div>
+        </div>
+        <div class="timeline-step">
+          <div class="tl-icon"><img src="./img/Designing Planning.gif" alt="Designing" style="width:100%;height:100%;object-fit:contain;border-radius:50%"></div>
+          <div class="tl-content"><h3>Designing Planning</h3><p>We map out your website's structure, sections, and content flow to make development efficient and results-driven.</p></div>
+        </div>
+        <div class="timeline-step">
+          <div class="tl-icon"><img src="./img/Website Structure.gif" alt="Structure" style="width:100%;height:100%;object-fit:contain;border-radius:50%"></div>
+          <div class="tl-content"><h3>Website Structure</h3><p>We map out your website's structure, sections, and content flow to make development efficient and results-driven.</p></div>
+        </div>
+        <div class="timeline-step">
+          <div class="tl-icon"><img src="./img/Optimization & Testing.gif" alt="Testing" style="width:100%;height:100%;object-fit:contain;border-radius:50%"></div>
+          <div class="tl-content"><h3>Optimization &amp; Testing</h3><p>Ensuring fast loading speeds, responsive design, cross-browser compatibility, and SEO-friendly structure for best performance.</p></div>
+        </div>
+        <div class="timeline-step">
+          <div class="tl-icon"><img src="./img/Launch & Support.gif" alt="Launch" style="width:100%;height:100%;object-fit:contain;border-radius:50%"></div>
+          <div class="tl-content"><h3>Launch &amp; Support</h3><p>We launch your website smoothly and provide guidance, training, and ongoing support to help you manage and grow your site.</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="process-cta"><a href="http://Wa.me/+8801884194199" target="_blank" class="btn btn-filled">Contact Me</a></div>
+  </div>
+</section>
+
+<!-- ===== PRICING (LIGHT) - FIX #7 ===== -->
+<section class="pricing-sec">
+  <div class="container">
+    <div class="pricing-header">
+      <h4 class="badge">pricing</h4>
+      <span class="badge-number hidden-mobile">Reasonable Pricing Made for You</span>
+    </div>
+    <div class="pricing-title staggerscroll"><h2>Flexible Pricing</h2></div>
+
+    <!-- Mobile Tabs -->
+    <div class="mobile-pricing">
+      <div class="tabs-row">
+        <button class="tab-btn active" data-tab="0">Static</button>
+        <button class="tab-btn" data-tab="1">Standard</button>
+        <button class="tab-btn" data-tab="2">Premium</button>
+      </div>
+      <div class="tab-panel active" data-panel="0">
+        <h3 class="plan-name">Startup Website Plan</h3>
+        <div class="plan-price">$??? <span style="font-size:16px;color:var(--gray)">/ month</span></div>
+        <p class="plan-sub">Choose the platform that best fits your vision and budget.</p>
+        <a href="https://www.fiverr.com/mahin38" target="_blank" class="btn btn-ghost" style="width:100%">Order Now</a>
+        <ul class="plan-features"><li>1 Page</li><li>Responsive Design</li><li>Content Upload</li><li>Design Customization</li><li>2 Plugins/Extensions</li><li>Hosting setup</li><li>Opt-in form</li><li>5 Revision</li><li>One Week Support</li></ul>
+      </div>
+      <div class="tab-panel" data-panel="1">
+        <h3 class="plan-name">Business Website Plan</h3>
+        <div class="plan-price">$??? <span style="font-size:16px;color:var(--gray)">/ month</span></div>
+        <p class="plan-sub">Choose the platform that best fits your vision and budget.</p>
+        <a href="https://www.fiverr.com/mahin38" target="_blank" class="btn btn-filled" style="width:100%">Order Now</a>
+        <ul class="plan-features"><li>5 Pages</li><li>Responsive Design</li><li>Content Upload</li><li>Design Customization</li><li>5 Plugins/Extensions</li><li>Hosting setup</li><li>Opt-in form</li><li>Unlimited Revisions</li><li>One Month Support</li></ul>
+      </div>
+      <div class="tab-panel" data-panel="2">
+        <h3 class="plan-name">Custom Website Plan</h3>
+        <div class="plan-price">$??? <span style="font-size:16px;color:var(--gray)">/ month</span></div>
+        <p class="plan-sub">Choose the platform that best fits your vision and budget.</p>
+        <a href="https://www.fiverr.com/mahin38" target="_blank" class="btn btn-ghost" style="width:100%">Order Now</a>
+        <ul class="plan-features"><li>10 Pages</li><li>Responsive Design</li><li>Content Upload</li><li>Design Customization</li><li>15 Plugins/Extensions</li><li>E-commerce functionality</li><li>Design Figma</li><li>Opt-in form</li><li>Unlimited Revisions</li><li>One Month Support</li></ul>
+      </div>
+    </div>
+
+    <!-- Desktop -->
+    <div class="desk-pricing-wrap">
+      <div class="desk-pricing">
+        <div class="desk-plan">
+          <h3 class="plan-name">Startup Website Plan</h3>
+          <div class="plan-price">$??? <span style="font-size:16px;color:var(--gray)">/ month</span></div>
+          <p class="plan-sub">Choose the platform that best fits your vision and budget.</p>
+          <a href="https://www.fiverr.com/mahin38" target="_blank" class="btn btn-ghost" style="width:100%">Order Now</a>
+        </div>
+        <div class="desk-plan featured">
+          <h3 class="plan-name">Business Website Plan</h3>
+          <div class="plan-price">$??? <span style="font-size:16px;color:var(--gray)">/ month</span></div>
+          <p class="plan-sub">Choose the platform that best fits your vision and budget.</p>
+          <a href="https://www.fiverr.com/mahin38" target="_blank" class="btn btn-filled" style="width:100%">Order Now</a>
+        </div>
+        <div class="desk-plan">
+          <h3 class="plan-name">Custom Website Plan</h3>
+          <div class="plan-price">$??? <span style="font-size:16px;color:var(--gray)">/ month</span></div>
+          <p class="plan-sub">Choose the platform that best fits your vision and budget.</p>
+          <a href="https://www.fiverr.com/mahin38" target="_blank" class="btn btn-ghost" style="width:100%">Order Now</a>
+        </div>
+      </div>
+      <!-- FIX #7: table with visible text colors and left-aligned feature rows -->
+      <table class="cmp-table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Startup</th>
+            <th class="hl">Business</th>
+            <th>Custom</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Page Count</td><td>1 Page <span class="ck">✓</span></td><td class="hl">5 Pages <span class="ck">✓</span></td><td>10 Pages <span class="ck">✓</span></td></tr>
+          <tr><td>Responsiveness</td><td><span class="ck">✓</span></td><td class="hl"><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+          <tr><td>Content Upload</td><td><span class="ck">✓</span></td><td class="hl"><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+          <tr><td>E-commerce</td><td><span class="cx">✗</span></td><td class="hl"><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+          <tr><td>SEO &amp; Speed</td><td><span class="cx">✗</span></td><td class="hl"><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+          <tr><td>Website Security</td><td><span class="cx">✗</span></td><td class="hl"><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+          <tr><td>Revision</td><td>5 times <span class="ck">✓</span></td><td class="hl">Unlimited <span class="ck">✓</span></td><td>Unlimited <span class="ck">✓</span></td></tr>
+          <tr><td>Turnaround</td><td>1-3 Days <span class="ck">✓</span></td><td class="hl">3-7 Days <span class="ck">✓</span></td><td>5-12 Days <span class="ck">✓</span></td></tr>
+          <tr><td>Support</td><td>One Week <span class="ck">✓</span></td><td class="hl">One Month <span class="ck">✓</span></td><td>One Month <span class="ck">✓</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS (DARK) - FIX #8 ===== -->
+<section class="testimonial-sec">
+  <div class="container">
+    <!-- FIX #8: header row exactly like reference - badge left, number right -->
+    <div class="testimonial-header-row">
+      <h4 class="badge">testimonials</h4>
+      <span class="badge-number hidden-mobile">Clients one the mic</span>
+    </div>
+    <div class="staggerscroll"><h2 class="section-heading-xl" style="color:var(--light)">Client Words That Inspire</h2></div>
+    <div class="testimonial-carousel">
+      <div class="testimonial-track" id="tTrack">
+        <div class="testimonial-slide">
+          <div class="tq">Muhammad Mahin built my website exactly the way I envisioned it. The process was smooth, and the final result exceeded my expectations. Highly professional and easy to work with!</div>
+          <div class="t-author"><div class="t-avatar" style="background:url('./img/Testimonial 1.png') center/cover no-repeat"></div><div class="t-info"><h4>Emily Watson</h4><span>Entrepreneur</span></div></div>
+        </div>
+        <div class="testimonial-slide">
+          <div class="tq">Working with Mahin was amazing! He delivered a fast, responsive WordPress site that perfectly represents my brand.</div>
+          <div class="t-author"><div class="t-avatar" style="background:url('./img/Testimonial 2.png') center/cover no-repeat"></div><div class="t-info"><h4>Lucas Martinez</h4><span>Founder - Marketing Agency</span></div></div>
+        </div>
+        <div class="testimonial-slide">
+          <div class="tq">Mahin understood exactly what I needed and created a website that truly stands out. Highly professional and reliable.</div>
+          <div class="t-author"><div class="t-avatar" style="background:url('./img/Testimonial 1.png') center/cover no-repeat"></div><div class="t-info"><h4>Sophia Bennett</h4><span>Entrepreneur</span></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-arrows"><button id="prevBtn">‹</button><button id="nextBtn">›</button></div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ME (LIGHT) - FIX #9 ===== -->
+<section class="about-sec">
+  <div class="container">
+    <div class="staggerscroll">
+      <h4 class="badge about-badge">About me</h4>
+    </div>
+    <p class="about-lead">A strategic thinker at heart, I create solutions that blend<br class="hidden-mobile"> creativity, clarity, and high-converting design for <br class="hidden-mobile">modern brands.</p>
+    <div class="about-divider"></div>
+    <div class="about-grid">
+      <div class="about-img" style="background:url('./img/about me img.jpg') center/cover no-repeat"></div>
+      <div class="about-text">
+        <p>I'm a passionate and dedicated <strong>WordPress, Wix, and Webflow</strong> expert with 5+ years of experience and over 450+ successful projects. I specialize in creating clean, high-performing websites built around your brand's needs. With strong skills in UI/UX design (Figma) and digital marketing, I design websites that don't just look great—but actually convert, perform, and support real business growth.</p>
+        <p>I focus on understanding your goals, researching your brand, and delivering a website that feels professional, <strong>modern</strong>, and uniquely yours.</p>
+        <ul class="credentials">
+          <li>WORDPRESS DEVELOPER / CODEMANBD / 2020</li>
+          <li>WIX EXPERT / CODEMANBD / 2023</li>
+          <li>WEBFLOW DESIGNER / CODEMANBD / 2023</li>
+          <li>DIGITAL MARKETING / E-LEARNING / 2024</li>
+        </ul>
+        <a href="./about-me/" class="btn btn-filled">About Me</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AGENCY (DARK) ===== -->
+<section class="agency-sec">
+  <div class="container">
+    <div class="agency-grid">
+      <div>
+        <h4 class="badge" style="margin-bottom:16px">Co-founder</h4>
+        <h2 class="agency-title">Mahin Agency</h2>
+        <p class="agency-desc">I've always aimed to simplify the process and deliver top-tier results. As a freelancer, it was challenging to maintain consistent quality across all projects. That's why I started my own agency — so I could manage everything under one direction and deliver better outcomes for my clients.</p>
+        <ul class="agency-list"><li>Website Development</li><li>Graphics Designer</li><li>Digital Marketing</li></ul>
+        <a href="./about-me/" class="btn btn-ghost" style="margin-top:24px">Coming Soon..</a>
+      </div>
+      <div>
+        <div class="agency-video"><iframe src="https://www.youtube.com/embed/XHOmBV4js_E" title="Mahin Agency" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+        <div class="agency-stats">
+          <div class="ag-stat"><div class="stat-num" data-target="450" data-suffix="+">0</div><p class="stat-title">Successful projects</p></div>
+          <div class="ag-stat"><div class="stat-num" data-target="20" data-suffix="+">0</div><p class="stat-title">Happy clients worldwide</p></div>
+          <div class="ag-stat"><div class="stat-num" data-target="4.9" data-suffix="" data-decimal="true">0</div><p class="stat-title">Trusted on Clutch</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BLOG (DARK) - FIX #10 ===== -->
+<section class="blog-sec">
+  <div class="container">
+    <div class="testimonial-header-row">
+      <h4 class="badge">Blogs</h4>
+      <span class="badge-number">GROWTH STORIES</span>
+    </div>
+    <div class="staggerscroll"><h2 class="section-heading-xl" style="color:var(--light)">INSIGHTS FROM MY JOURNEY</h2></div>
+    <!-- FIX #10: equal height blog cards -->
+    <div class="blog-grid">
+      <div class="blog-card">
+        <div class="blog-thumb-wrap"><div class="blog-thumb" style="background:url('./img/blog.jpg') center/cover no-repeat"></div></div>
+        <div class="blog-body"><div class="blog-meta"><span>December 9, 2025</span><span>Mahin</span></div><h3>Why You Should Choose WordPress for Your Website in 2026</h3><a href="#" class="blog-link">Read More</a></div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-thumb-wrap"><div class="blog-thumb" style="background:url('./img/blog1.jpg') center/cover no-repeat"></div></div>
+        <div class="blog-body"><div class="blog-meta"><span>December 9, 2025</span><span>Mahin</span></div><h3>Why You Should Choose WIX for Your Website</h3><a href="#" class="blog-link">Read More</a></div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-thumb-wrap"><div class="blog-thumb" style="background:url('./img/blog3.jpg') center/cover no-repeat"></div></div>
+        <div class="blog-body"><div class="blog-meta"><span>December 9, 2025</span><span>Mahin</span></div><h3>Why You Should Choose Webflow for Your Website</h3><a href="#" class="blog-link">Read More</a></div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:40px"><a href="./blogs/" class="btn btn-outline-light">Read All Blogs</a></div>
+  </div>
+</section>
+
+<!-- ===== COMPARISON (LIGHT) - FIX #11 ===== -->
+<section class="compare-sec">
+  <div class="container">
+    <!-- FIX #11: header row with badge + number -->
+    <div class="compare-header-row">
+      <h4 class="badge" style="color:#F2500D;letter-spacing:4px">Why work with me ?</h4>
+    </div>
+    <div class="staggerscroll"><h2 class="section-heading-xl" style="color:var(--dark);margin:20px 0 40px;white-space:nowrap;">Choosing the right partner</h2></div>
+    <div class="compare-wrap">
+      <div class="compare-grid">
+        <div class="compare-box compare-left">
+          <h3>Working With Me</h3>
+          <ul class="compare-list">
+            <li>Conversion Focused Website</li>
+            <li>Smooth and clear updates</li>
+            <li>Strong Online Presence</li>
+            <li>Delivered On Schedule</li>
+            <li>Support After Launch</li>
+          </ul>
+        </div>
+        <div class="compare-center">
+          <div class="compare-img"></div>
+        </div>
+        <div class="compare-box compare-right">
+          <h3>Work With Freelancer</h3>
+          <ul class="compare-list">
+            <li>Lack of Industry Knowledge</li>
+            <li>Lack of Communication</li>
+            <li>Design Focused Website</li>
+            <li>Deadlines Often Missed</li>
+            <li>Expensive</li>
+          </ul>
+        </div>
+      </div>
+      <div class="compare-bottom-line"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BOTTOM CTA (DARK) - FIX #12 ===== -->
+<section class="cta-sec">
+  <div class="container">
+    <!-- FIX #12: bigger font, line breaks, different bg #0d0d0d -->
+    <div class="staggerscroll">
+      <h2>Start with a<br class="hidden-mobile">dream website<br class="hidden-mobile">for me</h2>
+    </div>
+    <p>Ready to get started? Click here and let's create a website that looks great, works perfectly, and drives results.</p>
+    <div class="cta-btns">
+      <a href="http://Wa.me/+8801884194199" target="_blank" class="btn btn-filled">Book a call</a>
+      <a href="./work/" class="btn btn-outline-light">View work</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER - FIX #13 ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="./">Home</a>
+        <a href="./about-me/">About me</a>
+        <a href="./work/">Works</a>
+        <a href="./service/">Service</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="./blogs/">Blogs</a>
+      </div>
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <!-- FIX #13: Azeret Mono uppercase text -->
+        <a href="https://www.behance.net/muhammadmahindev" target="_blank">Behance</a>
+        <a href="https://www.facebook.com/muhammadmahindev/" target="_blank">Facebook</a>
+        <a href="https://www.linkedin.com/in/muhammadmahindev/" target="_blank">LinkedIn</a>
+        <a href="https://www.instagram.com/muhammadmahindev/" target="_blank">Instagram</a>
+      </div>
+      <div class="footer-col">
+        <!-- FIX #13: promo-box without box style, just text + btn -->
+        <div class="promo-box">
+          <p>Need your next website built by a top-tier designer? I'm available now — and the next project gets <strong>10% off</strong>. First come, first served. Reach out quickly to secure your slot.</p>
+          <a href="http://Wa.me/+8801884194199" target="_blank" class="btn btn-filled" style="padding:22px 40px !important;">Claim 10% Off</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+      <div style="text-align:left"><span>©2026 MUHAMMAD MAHIN. ALL RIGHTS RESERVED.</span></div>
+      <div style="text-align:center"><a href="#">PRIVACY POLICY</a></div>
+      <div style="text-align:right"><a href="#">TERMS &amp; CONDITIONS</a></div>
+    </div>
+    <!-- FIX #13: outline text brand, smaller font, transparent fill, white stroke -->
+    <div class="footer-brand">
+      <h2>Muhammad Mahin</h2>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== SCRIPTS ===== -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
